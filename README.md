@@ -1,6 +1,9 @@
 # MyTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+- Clone or Download this project
+- npm install 
+- ng serve
 
 ## Development server
 

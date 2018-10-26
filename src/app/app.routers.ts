@@ -6,17 +6,21 @@
  * @Last Modified time: 2018/10/25
  */
 import { Router } from '@angular/router';
+import {LoginGuradService} from './service/login-gurad.service';
 export const appRouters = [
   {
     path: '',
-    loadChildren: 'src/app/pages/pages.module#PagesModule'
+    loadChildren: 'src/app/pages/pages.module#PagesModule',
+    canActivate: [LoginGuradService]
   },
   {
     path: 'login',
-    loadChildren: 'src/app/login/login.module#LoginModule'
+    loadChildren: 'src/app/login/login.module#LoginModule',
+    canActivate: [LoginGuradService]
   },
   {
     path: '**',
-    loadChildren: 'src/app/pages/pages.module#PagesModule'
+    loadChildren: 'src/app/pages/pages.module#PagesModule',
+    canActivate: [LoginGuradService]
   }
 ];
