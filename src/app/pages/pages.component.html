@@ -1,0 +1,28 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;position:relative;">
+      <li nz-menu-item routerLink="/home" routerLinkActive="ant-menu-item-selected">
+        首页
+      </li>
+      <li nz-menu-item routerLink="/user" routerLinkActive="ant-menu-item-selected">
+        管理中心
+      </li>
+      <li nz-menu-item routerLink="/about" routerLinkActive="ant-menu-item-selected">
+        关于我们
+      </li>
+      <li class="avater">
+        <nz-avatar nzIcon="anticon anticon-user" nzSrc="http://img.zcool.cn/community/01786557e4a6fa0000018c1bf080ca.png"></nz-avatar> <span>欢迎您：{{ userName }}</span>
+        <i nz-icon type="poweroff" theme="outline" class="close"></i>
+      </li>
+    </ul>
+  </nz-header>
+  <nz-content style="padding:0 50px;">
+    <nz-breadcrumb style="margin:16px 0;">
+    </nz-breadcrumb>
+    <div style="background:#fff; min-height: 280px;">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+  <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+</nz-layout>

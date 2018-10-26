@@ -1,0 +1,18 @@
+.container .jumbotron {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.jumbotron h1 {
+  font-size: 63px;
+}
+
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.carousel {
+  width: 900px;
+  margin: 0 auto;
+}

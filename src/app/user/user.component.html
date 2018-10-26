@@ -1,0 +1,33 @@
+<nz-layout>
+  <nz-layout>
+    <nz-sider [nzWidth]="200" style="background:#fff">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%">
+        <li nz-submenu [(nzOpen)]="openMap.sub1" (nzOpenChange)="openHandle('sub1')">
+          <span title><i nz-icon type="user"></i>用户管理</span>
+          <ul>
+            <li nz-menu-item routerLink="certification" routerLinkActive="ant-menu-item-selected">实名认证</li>
+            <li nz-menu-item routerLink="business" routerLinkActive="ant-menu-item-selected">公司企业</li>
+            <li nz-menu-item routerLink="code" routerLinkActive="ant-menu-item-selected">推荐码</li>
+          </ul>
+        </li>
+        <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandle('sub2')">
+          <span title><i nz-icon type="solution" theme="outline"></i>角色管理</span>
+          <ul>
+            <li nz-menu-item routerLink="rights" routerLinkActive="ant-menu-item-selected">权限管理</li>
+          </ul>
+        </li>
+        <li nz-submenu [(nzOpen)]="openMap.sub3" (nzOpenChange)="openHandle('sub3')">
+          <span title><i nz-icon type="setting" theme="outline"></i>日志管理</span>
+          <ul>
+            <li nz-menu-item routerLink="logs" routerLinkActive="ant-menu-item-selected">操作日志</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout style="padding:0 24px 0">
+      <nz-content style="background:#fff; padding: 24px; min-height: 280px;">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

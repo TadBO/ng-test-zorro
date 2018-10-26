@@ -1,0 +1,56 @@
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24" class="form-group">
+    <div nz-col [nzSpan]="12">
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="8">姓名</nz-form-label>
+        <nz-form-control [nzSpan]="16">
+          <input nz-input placeholder="请输入搜索的姓名" formControlName="name" >
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="8">状态</nz-form-label>
+        <nz-form-control [nzSpan]="16">
+          <nz-select id="gender" formControlName="state" nzPlaceHolder="请选择审核状态">
+            <nz-option nzValue="1" nzLabel="未审核"></nz-option>
+            <nz-option nzValue="2" nzLabel="审核中"></nz-option>
+            <nz-option nzValue="3" nzLabel="已审核"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="24" style="text-align: right;">
+      <button nz-button [nzType]="'primary'" (click)="searchForm()" style="margin-right: 20px;">搜索</button>
+      <button nz-button (click)="resetForm()">重置</button>
+    </div>
+  </div>
+</form>
+<div class="search-result-list">
+  <nz-table #basicTable [nzData]="dataSet">
+    <thead>
+    <tr>
+      <th>序号</th>
+      <th>姓名</th>
+      <th>联系方式</th>
+      <th>地址</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data; let i = index;">
+      <td>{{ i + 1 }}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.phone}}</td>
+      <td>{{data.address}}</td>
+      <td>
+        <a>审核</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a>删除</a>
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+</div>
