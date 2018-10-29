@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-code-management',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./code-management.component.css']
 })
 export class CodeManagementComponent implements OnInit {
-
-  constructor() { }
+  public validateForm: FormGroup;
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.validateForm = this.fb.group({
+      name: [null,  [ Validators.required ]],
+      phone: [null,  [ Validators.required ]],
+      content: []
+    });
+  }
+  public submitForm(): void {
+    for (const i in this.validateForm.controls) {
+      this.validateForm.controls[ i ].markAsDirty();
+      this.validateForm.controls[ i ].updateValueAndValidity();
+    }
+    console.log(this.validateForm.value);
   }
 
 }

@@ -11,6 +11,7 @@ import {CodeManagementComponent} from './code-management/code-management.compone
 import {RightsManagementComponent} from './rights-management/rights-management.component';
 import {LogsManagementComponent} from './logs-management/logs-management.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     RouterModule.forChild(userRouters),
     NgZorroAntdModule,
     ReactiveFormsModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    EditorModule
   ],
   declarations: [
     UserComponent,
