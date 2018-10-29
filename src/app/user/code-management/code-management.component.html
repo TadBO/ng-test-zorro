@@ -4,17 +4,19 @@
       <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">推荐人姓名</nz-form-label>
       <nz-form-control [nzSm]="14" [nzXs]="24">
         <input nz-input formControlName="name" id="name" placeholder="请输入推荐人姓名">
-        <nz-form-explain *ngIf="validateForm.get('name').dirty && validateForm.get('name').errors">推荐人姓名必须填写!</nz-form-explain>
+        <nz-form-explain *ngIf="validateForm.get('name').dirty && validateForm.get('name').errors">推荐人姓名必须填写!
+        </nz-form-explain>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="phone">推荐人电话</nz-form-label>
       <nz-form-control [nzSm]="14" [nzXs]="24">
         <input nz-input formControlName="phone" id="phone" placeholder="请输入推荐人电话">
-        <nz-form-explain *ngIf="validateForm.get('phone').dirty && validateForm.get('phone').errors">推荐人电话必须填写!</nz-form-explain>
+        <nz-form-explain *ngIf="validateForm.get('phone').dirty && validateForm.get('phone').errors">推荐人电话必须填写!
+        </nz-form-explain>
       </nz-form-control>
     </nz-form-item>
-    <editor formControlName="content" [init]="{selector: 'textarea'}"></editor>
+    <editor formControlName="content" [init]="tinymceConfig"></editor>
     <nz-form-item nz-row style="margin-bottom:8px;">
       <nz-form-control [nzSpan]="14" [nzOffset]="6">
         <button nz-button nzType="primary">提交</button>

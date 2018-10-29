@@ -12,6 +12,7 @@ import {RightsManagementComponent} from './rights-management/rights-management.c
 import {LogsManagementComponent} from './logs-management/logs-management.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import {LeaveGuradService} from '../service/leave-gurad.service';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     CodeManagementComponent,
     RightsManagementComponent,
     LogsManagementComponent
-  ]
+  ],
+  providers: [LeaveGuradService]
 })
 export class UserModule {
 }

@@ -16,3 +16,7 @@
   cursor: pointer;
   margin-left: 6px;
 }
+
+.ant-menu-item:focus {
+  outline: none;
+}

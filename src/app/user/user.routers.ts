@@ -12,6 +12,7 @@ import {BusinessManagementComponent} from './business-management/business-manage
 import {CodeManagementComponent} from './code-management/code-management.component';
 import {RightsManagementComponent} from './rights-management/rights-management.component';
 import {LogsManagementComponent} from './logs-management/logs-management.component';
+import {LeaveGuradService} from '../service/leave-gurad.service';
 export const userRouters = [
   {
     path: '',
@@ -32,7 +33,8 @@ export const userRouters = [
       },
       {
         path: 'code',
-        component: CodeManagementComponent
+        component: CodeManagementComponent,
+        canDeactivate: [LeaveGuradService]
       },
       {
         path: 'rights',

@@ -1,0 +1,8 @@
+.ant-menu-horizontal > .ant-menu-item:hover {
+  border-bottom: 2px solid #1890ff;
+  color: #1890ff;
+}
+
+.ant-menu-item:focus {
+  outline: none;
+}

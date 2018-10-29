@@ -6,7 +6,8 @@ import {NzModalService} from 'ng-zorro-antd';
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.css']
+  styleUrls: ['./pages.component.css'],
+  providers: [NzModalService]
 })
 export class PagesComponent implements OnInit {
   public userName: string = userModel.userName;
