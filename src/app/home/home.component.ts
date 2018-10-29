@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { userModel } from '../model/user.model';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public userName: string = userModel.userName;
   public array: Array<object> = [
     {
       src: 'https://images.pexels.com/photos/412537/pexels-photo-412537.jpeg?auto=compress&cs=tinysrgb&w=900'

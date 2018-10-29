@@ -6,9 +6,8 @@
  * @Last Modified time: 2018/10/26
  */
 
-const userModel = {
+export const userModel = {
   isLogin: false,
   userName: '',
   password: ''
 };
-export default userModel;

@@ -15,12 +15,14 @@ export const appRouters = [
   },
   {
     path: 'login',
-    loadChildren: 'src/app/login/login.module#LoginModule',
-    canActivate: [LoginGuradService]
+    loadChildren: 'src/app/login/login.module#LoginModule'
+  },
+  {
+    path: 'register',
+    loadChildren: 'src/app/register/register.module#RegisterModule'
   },
   {
     path: '**',
-    loadChildren: 'src/app/pages/pages.module#PagesModule',
-    canActivate: [LoginGuradService]
+    loadChildren: 'src/app/pages/pages.module#PagesModule'
   }
 ];
