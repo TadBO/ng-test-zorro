@@ -10,13 +10,15 @@ import {BusinessManagementComponent} from './business-management/business-manage
 import {CodeManagementComponent} from './code-management/code-management.component';
 import {RightsManagementComponent} from './rights-management/rights-management.component';
 import {LogsManagementComponent} from './logs-management/logs-management.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(userRouters),
     NgZorroAntdModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEchartsModule
   ],
   declarations: [
     UserComponent,
