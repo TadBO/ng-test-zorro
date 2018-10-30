@@ -5,6 +5,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - npm install 
 - ng serve
 
+## Effect
+![avatar](local/images/1.png)
+
+![avatar](local/images/2.png)
+
+![avarar](local/images/3.png)
+
+![avarar](local/images/4.png)
+
+![avarar](local/images/5.png)
+
+![avarar](local/images/6.png)
+
+![avarar](local/images/7.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
