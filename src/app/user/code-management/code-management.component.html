@@ -12,7 +12,7 @@
       <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="phone">推荐人电话</nz-form-label>
       <nz-form-control [nzSm]="14" [nzXs]="24">
         <input nz-input formControlName="phone" id="phone" placeholder="请输入推荐人电话">
-        <nz-form-explain *ngIf="validateForm.get('phone').dirty && validateForm.get('phone').errors">推荐人电话必须填写!
+        <nz-form-explain *ngIf="validateForm.get('phone').dirty && validateForm.get('phone').errors">{{ validateForm.get('phone').errors.mobile.info }}!
         </nz-form-explain>
       </nz-form-control>
     </nz-form-item>

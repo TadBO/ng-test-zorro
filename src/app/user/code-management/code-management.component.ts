@@ -11,6 +11,11 @@ export class CodeManagementComponent implements OnInit {
   public tinymceConfig: object = {
     selector: 'textarea'
   };
+  public mobileValidator(contol: FormControl): any {
+    const mobieReg =  /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+    const result = mobieReg.test(contol.value);
+    return result ? null : { mobile: { info: '请输入正确的手机号'}};
+  }
 
   constructor(private fb: FormBuilder) {
   }
@@ -18,7 +23,7 @@ export class CodeManagementComponent implements OnInit {
   ngOnInit() {
     this.validateForm = this.fb.group({
       name: [null, [Validators.required]],
-      phone: [null, [Validators.required]],
+      phone: [null, [Validators.required, this.mobileValidator]],
       content: []
     });
   }
@@ -28,7 +33,7 @@ export class CodeManagementComponent implements OnInit {
       this.validateForm.controls[i].markAsDirty();
       this.validateForm.controls[i].updateValueAndValidity();
     }
-    console.log(this.validateForm.value);
+    console.log(this.validateForm);
   }
 
 }
