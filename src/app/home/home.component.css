@@ -1,3 +1,13 @@
+.container {
+  position: relative;
+}
+
+.container .tips {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .container .jumbotron {
   padding-right: 60px;
   padding-left: 60px;
