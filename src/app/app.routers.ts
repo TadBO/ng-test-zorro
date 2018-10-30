@@ -23,6 +23,6 @@ export const appRouters = [
   },
   {
     path: '**',
-    loadChildren: 'src/app/pages/pages.module#PagesModule'
+    loadChildren: 'src/app/login/login.module#LoginModule'
   }
 ];
