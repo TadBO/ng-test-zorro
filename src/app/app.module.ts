@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { appRouters } from './app.routers';
 import { AppComponent } from './app.component';
-import {NZ_MODAL_CONFIG} from 'ng-zorro-antd';
+import {NZ_MODAL_CONFIG, NZ_NOTIFICATION_CONFIG, NzNotificationService} from 'ng-zorro-antd';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import {NZ_MODAL_CONFIG} from 'ng-zorro-antd';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [NzNotificationService, { provide: NZ_NOTIFICATION_CONFIG, useValue: { nzDuration: 3000 }}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

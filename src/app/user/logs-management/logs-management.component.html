@@ -1,3 +1,11 @@
-<p>
-  logs-management works!
-</p>
+<nz-card nzTitle="树型结构">
+  <nz-tree
+    [nzData]="nodes"
+    nzDraggable="true"
+    (nzOnDragStart)="nzEvent($event)"
+    (nzOnDragEnter)="nzEvent($event)"
+    (nzOnDragLeave)="nzEvent($event)"
+    (nzOnDrop)="nzEvent($event)"
+    (nzOnDragEnd)="nzEvent($event)">
+  </nz-tree>
+</nz-card>
