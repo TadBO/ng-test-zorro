@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  public openMap: Object = {
+  public openMap: any = {
     sub1: true,
     sub2: false,
     sub3: false

@@ -8,7 +8,7 @@ import {EventBusService} from './service/event-bus.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterContentInit {
-  private isShow: boolean;
+  public isShow: boolean;
   constructor(private router: Router, private showLoading: EventBusService) {
   }
   ngOnInit() {

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
 import {pagesRouters} from './pages.routers';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 
 @NgModule({
   imports: [
