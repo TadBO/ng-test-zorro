@@ -20,7 +20,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![avarar](local/images/7.png)
 
-# PWD Efffect
+# PWA Efffect
 
 ![avarar](local/images/8.png)
 
