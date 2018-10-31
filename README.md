@@ -20,6 +20,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![avarar](local/images/7.png)
 
+# PWD Efffect
+
+![avarar](local/images/8.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
